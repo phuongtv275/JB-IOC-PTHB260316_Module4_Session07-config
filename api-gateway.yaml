@@ -17,14 +17,6 @@ spring:
           uri: lb://patient-service
           predicates:
             - Path=/api/v1/patients/**, /api/v1/patients
-        - id: doctor-service
-          uri: lb://DOCTOR-SERVICE
-          predicates:
-            - Path=/api/v1/doctors/**, /api/v1/doctors
-        - id: appointment-service
-          uri: lb://APPOINTMENT-SERVICE
-          predicates:
-            - Path=/api/v1/appointments/**, /api/v1/appointments
       server:
         webflux:
           routes:
@@ -32,14 +24,6 @@ spring:
               uri: lb://patient-service
               predicates:
                 - Path=/api/v1/patients/**, /api/v1/patients
-            - id: doctor-service
-              uri: lb://DOCTOR-SERVICE
-              predicates:
-                - Path=/api/v1/doctors/**, /api/v1/doctors
-            - id: appointment-service
-              uri: lb://APPOINTMENT-SERVICE
-              predicates:
-                - Path=/api/v1/appointments/**, /api/v1/appointments
 
 logging:
   pattern:

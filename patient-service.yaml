@@ -1,26 +1,31 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/patient_db
-    username: ${POSTGRES_USER:rikkei}
-    password: '{cipher}ae1bdd9c598a6eafcb2f0b9f13476561af83802f1e451d8d9b86de56509d616e'
-  jpa:
-    hibernate:
-      ddl-auto: update
 server:
   port: 8081
 
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/patient_db
+    username: postgres
+    password: '{cipher}ae1bdd9c598a6eafcb2f0b9f13476561af83802f1e451d8d9b86de56509d616e'
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
+
+app:
+  welcome: "Chào mừng tới BV RikkeiEducation"
 
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [cid:%X{correlationId:-N/A}] %logger{36} - %msg%n"
   level:
     com.example.patientservice: DEBUG
-
-app:
-  welcome: "Chào mừng tới BV RikkeiEducation"
