@@ -21,6 +21,3 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [cid:%X{correlationId:-N/A}] %logger{36} - %msg%n"
   level:
     com.example.patientservice: DEBUG
-
-app:
-  welcome: "Chào mừng tới BV RikkeiAcademy"
