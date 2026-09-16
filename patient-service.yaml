@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/patient_db
     username: postgres
-    password: '{cipher}ae1bdd9c598a6eafcb2f0b9f13476561af83802f1e451d8d9b86de56509d616e'
+    password: '{cipher}9ba4818d9cc34fe0ffa82ecb46615aeccf1c641f14b308365c71ee1829505db3'
   jpa:
     hibernate:
       ddl-auto: update
@@ -22,7 +22,7 @@ management:
         include: refresh, health, info
 
 app:
-  welcome: "Chào mừng tới BV RikkeiEducation"
+  welcome: "Hệ thống y tế Rikkei - Cập nhật tự động qua /refresh"
 
 logging:
   pattern:
