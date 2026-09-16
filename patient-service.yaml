@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/patient_db
     username: ${POSTGRES_USER:rikkei}
-    password: ${POSTGRES_PASSWORD:rikkei}
+    password: '{cipher}ae1bdd9c598a6eafcb2f0b9f13476561af83802f1e451d8d9b86de56509d616e'
   jpa:
     hibernate:
       ddl-auto: update
