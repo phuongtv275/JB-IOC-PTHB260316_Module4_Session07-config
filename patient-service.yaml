@@ -23,4 +23,4 @@ logging:
     com.example.patientservice: DEBUG
 
 app:
-  welcome: "Chào mừng tới BV RikkeiAcademy"
+  welcome: "Chào mừng tới BV RikkeiEducation"
