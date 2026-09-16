@@ -1,15 +1,13 @@
-server:
-  port: 8082
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/patient_db
     username: ${POSTGRES_USER:rikkei}
     password: ${POSTGRES_PASSWORD:rikkei}
-    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
+server:
+  port: 8081
 
 eureka:
   client:

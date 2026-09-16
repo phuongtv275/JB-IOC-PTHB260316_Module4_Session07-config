@@ -1,15 +1,15 @@
-server:
-  port: 8081
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/patient_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: ${MYSQL_USER:root}
-    password: ${MYSQL_PASSWORD:root}
+    url: jdbc:mysql://localhost:3306/patient_db
+    username: ${MYSQL_USER:rikkei}
+    password: ${MYSQL_PASSWORD:rikkei}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
+server:
+  port: 8081
 
 eureka:
   client:
